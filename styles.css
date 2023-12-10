@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Source+Sans+3:wght@200;300;400;700;900&display=swap');
+:root {
+    --primary-color: rgb(125, 199, 82);
+  }
+
+*,*::after,*::before
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+input
+{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+.width-50
+{
+    width: 120px;
+}
+.ml-auto
+{
+    margin-left: auto;
+}
+.forms
+{
+    position: relative;
+    min-height: 515px;
+    min-width:350px;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 60px 40px -30px rgba(0,0,0, 0.27);
+}
+.submissionResult.active
+{
+    display: block;
+    padding: 1.5rem;
+    min-height: 515px;
+    min-width:350px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 60px 40px -30px rgba(0,0,0, 0.27);
+    border-radius: 0.5rem;
+ } 
+label
+{
+   display: block;
+   font-weight: bold;
+   margin-bottom: 0.5rem;
+}
+
+.input-group
+{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #bababa;
+    padding: 0;
+    font-size: 0.95rem;
+    transition: 0.5s; 
+}
+.input-group.gndr
+{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.btn
+{
+    border: none ;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dcdcdc;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover
+{
+    background-color: var(--primary-color);
+    color: #eef3f5;  
+}
+
+.heading 
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-step
+{
+    display: none;
+    animation: animate 0.2s ease;
+}
+@keyframes animate
+{
+    from
+    {
+        transform: scale(1,0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1,1);
+        opacity: 100;
+    }
+}
+.form-step.active
+{
+    display: block;
+}
+
+/* progress */
+
+.progressbar
+{
+    position: absolute;
+    bottom: 5%;
+    left: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem auto 1rem auto;
+    width: 30%;
+}
+.progress-step
+{
+    width: 15px;
+    height: 15px;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.progress-step.active{
+    position: relative;
+    background-color: var(--primary-color);
+    color: #dcdcdc;
+}
+
+.button-group
+{
+
+    display: flex;
+    justify-content:space-between;
+    margin: 2rem 0 1rem 0;
+}
+
+.progressbar::before,.progress
+{
+     content: "";
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+.progress{
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+
+

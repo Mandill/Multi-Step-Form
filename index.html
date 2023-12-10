@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechJar</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <form action="#" class="forms" id="form">
+
+        <div class="form-step active">
+            <h2 class="heading"> Personal Info </h2>
+            <div class="input-group">
+                <label for="fname">First Name</label>
+                <input type="text" minlength="5" name="fname" id="fname" placeholder="First Name"  />
+            </div>
+            <div class="input-group">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" placeholder="Last Name" minlength="5"/>
+            </div>
+            <div class="input-group gndr">
+
+                <label for="male"> Male </label>
+                <input type="radio" id="gender" name="gender" value="male"> 
+
+                <label for="female"> Female </label>
+                <input type="radio" id="gender" name="gender" value="female"> 
+            </div>
+            <button class="btn btn-next width-50 ml-auto" type="button" onclick="validateFirst()">Next</button>
+        </div>
+
+        
+        <div class="form-step ">
+            <h2 class="heading"> Contact </h2>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="button-group">
+                <button class="btn btn-prev width-50 " type="button">Previous</button>
+                <button class="btn btn-next width-50 " type="button" onclick="validateSecond()">Next</button>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <h2 class="heading"> Comment Form </h2>
+            <div class="input-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="6" cols="39"></textarea>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-prev width-50 " type="button">Previous</button>
+                <button class="btn width-50 " type="submit">Submit</button>
+            </div>           
+        </div>
+
+        <div class="form-step">
+                       
+        </div>
+
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step active" data-title="Personal Info"></div>
+            <div class="progress-step" data-title="Contact"></div>
+            <div class="progress-step" data-title="Comments"></div>
+        </div>
+
+</form>
+<div class="submissionResult"></div>    
+<script src="script.js"></script>
+</body>
+</html>
